@@ -1,5 +1,5 @@
 **项目说明** 
-- renren-fast是一个轻量级的Java快速开发平台，能快速开发项目并交付【接私活利器】
+- renren-fast是一个轻量级的Java快速开发平台，能快速开发项目并交付
 <br> 
  
 
@@ -51,8 +51,7 @@ renren-fast
 - 开发文档：http://www.renren.io/open/renren-fast/
 - Git仓库：http://git.oschina.net/babaio/renren-fast
 - 其他项目：http://www.renren.io/open/
-- [编程入门教程](http://www.renren.io)：http://www.renren.io   
-- 官方QQ群：324780204、145799952
+- [编程入门教程](http://www.renren.io)：http://www.renren.io
 - 如需关注项目最新动态，请Watch、Star项目，同时也是对项目最好的支持
 <br> 
 
