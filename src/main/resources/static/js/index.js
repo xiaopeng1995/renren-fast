@@ -108,7 +108,7 @@ var vm = new Vue({
                 area: ['806px', '467px'],
                 closeBtn: 1,
                 shadeClose: false,
-                content: ['http://www.j1st.io', 'no']
+                content: [baseURL, 'no']
             });
         }
 	},
