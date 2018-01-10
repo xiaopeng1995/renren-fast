@@ -97,6 +97,10 @@ var vm = new Vue({
                 }
             });
         },
+		mainhome: function () {
+			//跳转到登录页面
+			location.href = baseURL ;
+		},
         donate: function () {
             layer.open({
                 type: 2,
@@ -104,7 +108,7 @@ var vm = new Vue({
                 area: ['806px', '467px'],
                 closeBtn: 1,
                 shadeClose: false,
-                content: ['http://cdn.renren.io/donate.jpg', 'no']
+                content: ['http://www.j1st.io', 'no']
             });
         }
 	},
