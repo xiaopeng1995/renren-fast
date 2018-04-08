@@ -5,7 +5,7 @@
 
 	<!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="io.renren.modules.generator.entity.GoodsEntity" id="goodsMap">
-        <result property="goodsId" column="goods_id"/>
+        <result property="goodsid" column="goodsId"/>
         <result property="name" column="name"/>
         <result property="intro" column="intro"/>
         <result property="price" column="price"/>
@@ -13,17 +13,17 @@
     </resultMap>
 
 	<select id="queryObject" resultType="io.renren.modules.generator.entity.GoodsEntity">
-		select * from tb_goods where goods_id = #{value}
+		select * from goods where goodsId = #{value}
 	</select>
 
 	<select id="queryList" resultType="io.renren.modules.generator.entity.GoodsEntity">
-		select * from tb_goods
+		select * from goods
         <choose>
             <when test="sidx != null and sidx.trim() != ''">
                 order by ${sidx} ${order}
             </when>
 			<otherwise>
-                order by goods_id desc
+                order by goodsId desc
 			</otherwise>
         </choose>
 		<if test="offset != null and limit != null">
@@ -32,12 +32,13 @@
 	</select>
 	
  	<select id="queryTotal" resultType="int">
-		select count(*) from tb_goods 
+		select count(*) from goods 
 	</select>
 	 
-	<insert id="save" parameterType="io.renren.modules.generator.entity.GoodsEntity" useGeneratedKeys="true" keyProperty="goodsId">
-		insert into tb_goods
+	<insert id="save" parameterType="io.renren.modules.generator.entity.GoodsEntity">
+		insert into goods
 		(
+			`goodsId`, 
 			`name`, 
 			`intro`, 
 			`price`, 
@@ -45,6 +46,7 @@
 		)
 		values
 		(
+			#{goodsid}, 
 			#{name}, 
 			#{intro}, 
 			#{price}, 
@@ -53,24 +55,24 @@
 	</insert>
 	 
 	<update id="update" parameterType="io.renren.modules.generator.entity.GoodsEntity">
-		update tb_goods 
+		update goods 
 		<set>
 			<if test="name != null">`name` = #{name}, </if>
 			<if test="intro != null">`intro` = #{intro}, </if>
 			<if test="price != null">`price` = #{price}, </if>
 			<if test="num != null">`num` = #{num}</if>
 		</set>
-		where goods_id = #{goodsId}
+		where goodsId = #{goodsid}
 	</update>
 	
 	<delete id="delete">
-		delete from tb_goods where goods_id = #{value}
+		delete from goods where goodsId = #{value}
 	</delete>
 	
 	<delete id="deleteBatch">
-		delete from tb_goods where goods_id in 
-		<foreach item="goodsId" collection="array" open="(" separator="," close=")">
-			#{goodsId}
+		delete from goods where goodsId in 
+		<foreach item="goodsid" collection="array" open="(" separator="," close=")">
+			#{goodsid}
 		</foreach>
 	</delete>
 

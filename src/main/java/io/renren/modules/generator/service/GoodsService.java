@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 商品管理
+ * 
  * 
  * @author chenshun
  * @email sunlightcs@gmail.com
- * @date 2018-01-10 11:40:01
+ * @date 2018-04-08 16:28:50
  */
 public interface GoodsService {
 	
-	GoodsEntity queryObject(Long goodsId);
+	GoodsEntity queryObject(Long goodsid);
 	
 	List<GoodsEntity> queryList(Map<String, Object> map);
 	
@@ -24,7 +24,7 @@ public interface GoodsService {
 	
 	void update(GoodsEntity goods);
 	
-	void delete(Long goodsId);
+	void delete(Long goodsid);
 	
-	void deleteBatch(Long[] goodsIds);
+	void deleteBatch(Long[] goodsids);
 }

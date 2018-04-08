@@ -6,82 +6,82 @@ import java.math.BigDecimal;
 
 
 /**
- * 商品管理
+ * 
  * 
  * @author chenshun
  * @email sunlightcs@gmail.com
- * @date 2018-01-10 11:40:01
+ * @date 2018-04-08 16:28:50
  */
 public class GoodsEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//
-	private Long goodsId;
-	//商品名
+	private Long goodsid;
+	//
 	private String name;
-	//介绍
+	//
 	private String intro;
-	//价格
+	//
 	private BigDecimal price;
-	//数量
+	//
 	private Integer num;
 
 	/**
 	 * 设置：
 	 */
-	public void setGoodsId(Long goodsId) {
-		this.goodsId = goodsId;
+	public void setGoodsid(Long goodsid) {
+		this.goodsid = goodsid;
 	}
 	/**
 	 * 获取：
 	 */
-	public Long getGoodsId() {
-		return goodsId;
+	public Long getGoodsid() {
+		return goodsid;
 	}
 	/**
-	 * 设置：商品名
+	 * 设置：
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
-	 * 获取：商品名
+	 * 获取：
 	 */
 	public String getName() {
 		return name;
 	}
 	/**
-	 * 设置：介绍
+	 * 设置：
 	 */
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
 	/**
-	 * 获取：介绍
+	 * 获取：
 	 */
 	public String getIntro() {
 		return intro;
 	}
 	/**
-	 * 设置：价格
+	 * 设置：
 	 */
 	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 	/**
-	 * 获取：价格
+	 * 获取：
 	 */
 	public BigDecimal getPrice() {
 		return price;
 	}
 	/**
-	 * 设置：数量
+	 * 设置：
 	 */
 	public void setNum(Integer num) {
 		this.num = num;
 	}
 	/**
-	 * 获取：数量
+	 * 获取：
 	 */
 	public Integer getNum() {
 		return num;

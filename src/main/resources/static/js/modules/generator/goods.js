@@ -3,11 +3,11 @@ $(function () {
         url: baseURL + 'generator/goods/list',
         datatype: "json",
         colModel: [			
-			{ label: 'goodsId', name: 'goodsId', index: 'goods_id', width: 50, key: true },
-			{ label: '商品名', name: 'name', index: 'name', width: 80 }, 			
-			{ label: '介绍', name: 'intro', index: 'intro', width: 80 }, 			
-			{ label: '价格', name: 'price', index: 'price', width: 80 }, 			
-			{ label: '数量', name: 'num', index: 'num', width: 80 }			
+			{ label: 'goodsid', name: 'goodsid', index: 'goodsId', width: 50, key: true },
+			{ label: '', name: 'name', index: 'name', width: 80 }, 			
+			{ label: '', name: 'intro', index: 'intro', width: 80 }, 			
+			{ label: '', name: 'price', index: 'price', width: 80 }, 			
+			{ label: '', name: 'num', index: 'num', width: 80 }			
         ],
 		viewrecords: true,
         height: 385,
@@ -53,17 +53,17 @@ var vm = new Vue({
 			vm.goods = {};
 		},
 		update: function (event) {
-			var goodsId = getSelectedRow();
-			if(goodsId == null){
+			var goodsid = getSelectedRow();
+			if(goodsid == null){
 				return ;
 			}
 			vm.showList = false;
             vm.title = "修改";
             
-            vm.getInfo(goodsId)
+            vm.getInfo(goodsid)
 		},
 		saveOrUpdate: function (event) {
-			var url = vm.goods.goodsId == null ? "generator/goods/save" : "generator/goods/update";
+			var url = vm.goods.goodsid == null ? "generator/goods/save" : "generator/goods/update";
 			$.ajax({
 				type: "POST",
 			    url: baseURL + url,
@@ -81,8 +81,8 @@ var vm = new Vue({
 			});
 		},
 		del: function (event) {
-			var goodsIds = getSelectedRows();
-			if(goodsIds == null){
+			var goodsids = getSelectedRows();
+			if(goodsids == null){
 				return ;
 			}
 			
@@ -91,7 +91,7 @@ var vm = new Vue({
 					type: "POST",
 				    url: baseURL + "generator/goods/delete",
                     contentType: "application/json",
-				    data: JSON.stringify(goodsIds),
+				    data: JSON.stringify(goodsids),
 				    success: function(r){
 						if(r.code == 0){
 							alert('操作成功', function(index){
@@ -104,8 +104,8 @@ var vm = new Vue({
 				});
 			});
 		},
-		getInfo: function(goodsId){
-			$.get(baseURL + "generator/goods/info/"+goodsId, function(r){
+		getInfo: function(goodsid){
+			$.get(baseURL + "generator/goods/info/"+goodsid, function(r){
                 vm.goods = r.goods;
             });
 		},

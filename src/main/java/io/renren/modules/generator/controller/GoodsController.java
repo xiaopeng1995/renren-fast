@@ -21,11 +21,11 @@ import io.renren.common.utils.R;
 
 
 /**
- * 商品管理
+ * 
  * 
  * @author chenshun
  * @email sunlightcs@gmail.com
- * @date 2018-01-10 11:40:01
+ * @date 2018-04-08 16:28:50
  */
 @RestController
 @RequestMapping("/generator/goods")
@@ -54,10 +54,10 @@ public class GoodsController {
 	/**
 	 * 信息
 	 */
-	@RequestMapping("/info/{goodsId}")
+	@RequestMapping("/info/{goodsid}")
 	@RequiresPermissions("generator:goods:info")
-	public R info(@PathVariable("goodsId") Long goodsId){
-		GoodsEntity goods = goodsService.queryObject(goodsId);
+	public R info(@PathVariable("goodsid") Long goodsid){
+		GoodsEntity goods = goodsService.queryObject(goodsid);
 		
 		return R.ok().put("goods", goods);
 	}
@@ -89,8 +89,8 @@ public class GoodsController {
 	 */
 	@RequestMapping("/delete")
 	@RequiresPermissions("generator:goods:delete")
-	public R delete(@RequestBody Long[] goodsIds){
-		goodsService.deleteBatch(goodsIds);
+	public R delete(@RequestBody Long[] goodsids){
+		goodsService.deleteBatch(goodsids);
 		
 		return R.ok();
 	}

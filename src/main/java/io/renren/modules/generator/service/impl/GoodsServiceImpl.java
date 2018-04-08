@@ -18,8 +18,8 @@ public class GoodsServiceImpl implements GoodsService {
 	private GoodsDao goodsDao;
 	
 	@Override
-	public GoodsEntity queryObject(Long goodsId){
-		return goodsDao.queryObject(goodsId);
+	public GoodsEntity queryObject(Long goodsid){
+		return goodsDao.queryObject(goodsid);
 	}
 	
 	@Override
@@ -43,13 +43,13 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 	
 	@Override
-	public void delete(Long goodsId){
-		goodsDao.delete(goodsId);
+	public void delete(Long goodsid){
+		goodsDao.delete(goodsid);
 	}
 	
 	@Override
-	public void deleteBatch(Long[] goodsIds){
-		goodsDao.deleteBatch(goodsIds);
+	public void deleteBatch(Long[] goodsids){
+		goodsDao.deleteBatch(goodsids);
 	}
 	
 }
