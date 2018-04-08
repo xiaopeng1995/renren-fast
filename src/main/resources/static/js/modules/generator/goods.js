@@ -4,10 +4,10 @@ $(function () {
         datatype: "json",
         colModel: [			
 			{ label: 'goodsid', name: 'goodsid', index: 'goodsId', width: 50, key: true },
-			{ label: '', name: 'name', index: 'name', width: 80 }, 			
-			{ label: '', name: 'intro', index: 'intro', width: 80 }, 			
-			{ label: '', name: 'price', index: 'price', width: 80 }, 			
-			{ label: '', name: 'num', index: 'num', width: 80 }			
+			{ label: '商品名称', name: 'name', index: 'name', width: 80 }, 			
+			{ label: '商品描述', name: 'intro', index: 'intro', width: 80 }, 			
+			{ label: '商品价格', name: 'price', index: 'price', width: 80 }, 			
+			{ label: '商品剩余数量', name: 'num', index: 'num', width: 80 }			
         ],
 		viewrecords: true,
         height: 385,

@@ -10,7 +10,7 @@ import java.util.Map;
  * 
  * @author chenshun
  * @email sunlightcs@gmail.com
- * @date 2018-04-08 16:28:50
+ * @date 2018-04-08 16:45:05
  */
 public interface GoodsService {
 	

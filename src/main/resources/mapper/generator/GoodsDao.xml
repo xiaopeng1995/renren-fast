@@ -35,10 +35,9 @@
 		select count(*) from goods 
 	</select>
 	 
-	<insert id="save" parameterType="io.renren.modules.generator.entity.GoodsEntity">
+	<insert id="save" parameterType="io.renren.modules.generator.entity.GoodsEntity" useGeneratedKeys="true" keyProperty="goodsid">
 		insert into goods
 		(
-			`goodsId`, 
 			`name`, 
 			`intro`, 
 			`price`, 
@@ -46,7 +45,6 @@
 		)
 		values
 		(
-			#{goodsid}, 
 			#{name}, 
 			#{intro}, 
 			#{price}, 
